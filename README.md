@@ -5,9 +5,11 @@ Este programa es una utilidad de escritorio que permite al usuario convertir ent
 ## Magnitudes aceptadas
 
 - Longitud
-- Masa
-- Superficie
+- Área
 - Tiempo
+- Masa
+- Presión
+- Temperatura
 
 ## Compatibilidad
 
