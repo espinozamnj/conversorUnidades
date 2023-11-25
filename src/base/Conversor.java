@@ -10,20 +10,14 @@ public class Conversor {
     public final String[] unidadesTemperatura = {"celsius", "fahrenheit", "kelvin"};
 
     public float convLongitud(String unidadEntrada, String unidadSalida, float valor) {
-        // Verificar si las unidades de entrada y salida son válidas
         if (!esUnidadValida(unidadEntrada, unidadesLongitud) || !esUnidadValida(unidadSalida, unidadesLongitud)) {
             System.out.println("Unidad de longitud inválida.");
             return 0;
         }
-
-        // Convertir todas las unidades a metros para simplificar la lógica
         float valorEnMetros = convertirAMetros(unidadEntrada, valor);
-
-        // Convertir de metros a la unidad de salida
         return convertirDesdeMetros(unidadSalida, valorEnMetros);
     }
 
-// Método para verificar si una unidad es válida
     private boolean esUnidadValida(String unidad, String[] unidades) {
         for (String u : unidades) {
             if (u.equals(unidad)) {
@@ -33,7 +27,6 @@ public class Conversor {
         return false;
     }
 
-// Método para convertir el valor a metros
     private float convertirAMetros(String unidad, float valor) {
         switch (unidad) {
             case "kilómetro":
@@ -54,8 +47,6 @@ public class Conversor {
                 return valor;
         }
     }
-
-// Método para convertir desde metros a la unidad especificada
     private float convertirDesdeMetros(String unidad, float valorEnMetros) {
         switch (unidad) {
             case "kilómetro":
@@ -76,22 +67,14 @@ public class Conversor {
                 return valorEnMetros;
         }
     }
-
     public float convArea(String unidadEntrada, String unidadSalida, float valor) {
-        // Verificar si las unidades de entrada y salida son válidas
         if (!esUnidadValida(unidadEntrada, unidadesArea) || !esUnidadValida(unidadSalida, unidadesArea)) {
             System.out.println("Unidad de área inválida.");
             return 0;
         }
-
-        // Convertir todas las unidades a metros cuadrados para simplificar la lógica
         float valorEnMetrosCuadrados = convertirAMetrosCuadrados(unidadEntrada, valor);
-
-        // Convertir de metros cuadrados a la unidad de salida
         return convertirDesdeMetrosCuadrados(unidadSalida, valorEnMetrosCuadrados);
     }
-
-// Método para convertir el valor a metros cuadrados
     private float convertirAMetrosCuadrados(String unidad, float valor) {
         switch (unidad) {
             case "kilómetro cuadrado":
@@ -105,9 +88,7 @@ public class Conversor {
             default: // metro cuadrado
                 return valor;
         }
-    }
-
-// Método para convertir desde metros cuadrados a la unidad especificada
+    } 
     private float convertirDesdeMetrosCuadrados(String unidad, float valorEnMetrosCuadrados) {
         switch (unidad) {
             case "kilómetro cuadrado":
@@ -124,20 +105,13 @@ public class Conversor {
     }
 
     public float convTiempo(String unidadEntrada, String unidadSalida, float valor) {
-        // Verificar si las unidades de entrada y salida son válidas
         if (!esUnidadValida(unidadEntrada, unidadesTiempo) || !esUnidadValida(unidadSalida, unidadesTiempo)) {
             System.out.println("Unidad de tiempo inválida.");
             return 0;
         }
-
-        // Convertir todas las unidades a segundos para simplificar la lógica
         float valorEnSegundos = convertirASegundos(unidadEntrada, valor);
-
-        // Convertir de segundos a la unidad de salida
         return convertirDesdeSegundos(unidadSalida, valorEnSegundos);
     }
-
-// Método para convertir el valor a segundos
     private float convertirASegundos(String unidad, float valor) {
         switch (unidad) {
             case "minuto":
@@ -156,8 +130,6 @@ public class Conversor {
                 return valor;
         }
     }
-
-// Método para convertir desde segundos a la unidad especificada
     private float convertirDesdeSegundos(String unidad, float valorEnSegundos) {
         switch (unidad) {
             case "minuto":
@@ -178,20 +150,13 @@ public class Conversor {
     }
 
     public float convMasa(String unidadEntrada, String unidadSalida, float valor) {
-        // Verificar si las unidades de entrada y salida son válidas
         if (!esUnidadValida(unidadEntrada, unidadesMasa) || !esUnidadValida(unidadSalida, unidadesMasa)) {
             System.out.println("Unidad de masa inválida.");
             return 0;
         }
-
-        // Convertir todas las unidades a gramos para simplificar la lógica
         float valorEnGramos = convertirAGramos(unidadEntrada, valor);
-
-        // Convertir de gramos a la unidad de salida
         return convertirDesdeGramos(unidadSalida, valorEnGramos);
     }
-
-// Método para convertir el valor a gramos
     private float convertirAGramos(String unidad, float valor) {
         switch (unidad) {
             case "kilogramo":
@@ -208,8 +173,6 @@ public class Conversor {
                 return valor;
         }
     }
-
-// Método para convertir desde gramos a la unidad especificada
     private float convertirDesdeGramos(String unidad, float valorEnGramos) {
         switch (unidad) {
             case "kilogramo":
@@ -226,22 +189,14 @@ public class Conversor {
                 return valorEnGramos;
         }
     }
-
     public float convPresion(String unidadEntrada, String unidadSalida, float valor) {
-        // Verificar si las unidades de entrada y salida son válidas
         if (!esUnidadValida(unidadEntrada, unidadesPresion) || !esUnidadValida(unidadSalida, unidadesPresion)) {
             System.out.println("Unidad de presión inválida.");
             return 0;
         }
-
-        // Convertir todas las unidades a pascales para simplificar la lógica
         float valorEnPascales = convertirAPascales(unidadEntrada, valor);
-
-        // Convertir de pascales a la unidad de salida
         return convertirDesdePascales(unidadSalida, valorEnPascales);
     }
-
-// Método para convertir el valor a pascales
     private float convertirAPascales(String unidad, float valor) {
         switch (unidad) {
             case "atmosfera":
@@ -256,8 +211,6 @@ public class Conversor {
                 return valor;
         }
     }
-
-// Método para convertir desde pascales a la unidad especificada
     private float convertirDesdePascales(String unidad, float valorEnPascales) {
         switch (unidad) {
             case "atmosfera":
@@ -272,22 +225,14 @@ public class Conversor {
                 return valorEnPascales;
         }
     }
-
     public float convTemperatura(String unidadEntrada, String unidadSalida, float valor) {
-        // Verificar si las unidades de entrada y salida son válidas
         if (!esUnidadValida(unidadEntrada, unidadesTemperatura) || !esUnidadValida(unidadSalida, unidadesTemperatura)) {
             System.out.println("Unidad de temperatura inválida.");
             return 0;
         }
-
-        // Convertir todas las unidades a Celsius para simplificar la lógica
         float valorEnCelsius = convertirACelsius(unidadEntrada, valor);
-
-        // Convertir de Celsius a la unidad de salida
         return convertirDesdeCelsius(unidadSalida, valorEnCelsius);
     }
-
-// Método para convertir el valor a Celsius
     private float convertirACelsius(String unidad, float valor) {
         switch (unidad) {
             case "fahrenheit":
@@ -298,8 +243,6 @@ public class Conversor {
                 return valor;
         }
     }
-
-// Método para convertir desde Celsius a la unidad especificada
     private float convertirDesdeCelsius(String unidad, float valorEnCelsius) {
         switch (unidad) {
             case "fahrenheit":
@@ -310,5 +253,4 @@ public class Conversor {
                 return valorEnCelsius;
         }
     }
-
 }
