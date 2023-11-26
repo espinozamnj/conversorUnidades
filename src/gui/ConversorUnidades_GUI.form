@@ -94,6 +94,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gu&#xed;a de uso"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuideActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="btnGH">
               <Properties>
@@ -113,6 +116,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Documentaci&#xf3;n"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDocsActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>

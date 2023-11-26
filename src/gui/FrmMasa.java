@@ -119,9 +119,9 @@ public class FrmMasa extends javax.swing.JInternalFrame {
 
     private void iptValorEntradaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_iptValorEntradaKeyTyped
         Character objTecla = evt.getKeyChar();
-        boolean delKey = objTecla == '\b' || objTecla == '\u007F';
+        boolean delKey = objTecla == '\b' || objTecla == '\u007F' || objTecla == '-';
         boolean validDot = false;
-        if (objTecla == '.') {;
+        if (objTecla == '.') {
             if (!iptValorEntrada.getText().contains(".")) {
                 validDot = true;
             }
@@ -156,11 +156,13 @@ public class FrmMasa extends javax.swing.JInternalFrame {
             if (strEntrada.endsWith(".")) {
                 strEntrada += "0";
             }
-            try {
-                valor = Float.parseFloat(strEntrada);
-            } catch (Exception ex) {
-                iptValorEntrada.setText("");
-                valor = 0;
+            if (!strEntrada.equals("-")) {
+                try {
+                    valor = Float.parseFloat(strEntrada);
+                } catch (Exception ex) {
+                    iptValorEntrada.setText("");
+                    valor = 0;
+                }
             }
         }
         return valor;

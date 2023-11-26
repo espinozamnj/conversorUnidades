@@ -113,6 +113,11 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
 
         btnGuide.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         btnGuide.setText("Guía de uso");
+        btnGuide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuideActionPerformed(evt);
+            }
+        });
         jMenu2.add(btnGuide);
 
         btnGH.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.ALT_DOWN_MASK));
@@ -126,6 +131,11 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
 
         btnDocs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.ALT_DOWN_MASK));
         btnDocs.setText("Documentación");
+        btnDocs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDocsActionPerformed(evt);
+            }
+        });
         jMenu2.add(btnDocs);
 
         jMenuBar1.add(jMenu2);
@@ -137,7 +147,6 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
 
     private void btnGHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGHActionPerformed
         String enlace = "https://github.com/espinozamnj/conversorUnidades/";
-
         try {
             Desktop desktop = Desktop.getDesktop();
             URI uri = new URI(enlace);
@@ -182,6 +191,28 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
         jDesktopPaneMain.add(frmTemperatura);
         frmTemperatura.setVisible(true);
     }//GEN-LAST:event_btnTemperaturaActionPerformed
+
+    private void btnGuideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuideActionPerformed
+        String enlace = "https://github.com/espinozamnj/conversorUnidades/blob/main/GUIDE.md";
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            URI uri = new URI(enlace);
+            desktop.browse(uri);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_btnGuideActionPerformed
+
+    private void btnDocsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDocsActionPerformed
+        String enlace = "https://github.com/espinozamnj/conversorUnidades/blob/main/DOCUMENTATION.md";
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            URI uri = new URI(enlace);
+            desktop.browse(uri);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_btnDocsActionPerformed
 
     /**
      * @param args the command line arguments

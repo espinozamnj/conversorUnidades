@@ -119,7 +119,7 @@ public class FrmArea extends javax.swing.JInternalFrame {
 
     private void iptValorEntradaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_iptValorEntradaKeyTyped
         Character objTecla = evt.getKeyChar();
-        boolean delKey = objTecla == '\b' || objTecla == '\u007F';
+        boolean delKey = objTecla == '\b' || objTecla == '\u007F' || objTecla == '-';
         boolean validDot = false;
         if (objTecla == '.') {;
             if (!iptValorEntrada.getText().contains(".")) {
