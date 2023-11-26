@@ -25,8 +25,9 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
         btnPresion = new javax.swing.JMenuItem();
         btnTemperatura = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        btnGuide = new javax.swing.JMenuItem();
+        btnGH = new javax.swing.JMenuItem();
+        btnDocs = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Conversor de unidades");
@@ -110,18 +111,22 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
 
         jMenu2.setText("Más");
 
-        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem5.setText("Guía de uso");
-        jMenu2.add(jMenuItem5);
+        btnGuide.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        btnGuide.setText("Guía de uso");
+        jMenu2.add(btnGuide);
 
-        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem6.setText("Sitio web");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        btnGH.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        btnGH.setText("Sitio web");
+        btnGH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                btnGHActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        jMenu2.add(btnGH);
+
+        btnDocs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        btnDocs.setText("Documentación");
+        jMenu2.add(btnDocs);
 
         jMenuBar1.add(jMenu2);
 
@@ -130,7 +135,7 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void btnGHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGHActionPerformed
         String enlace = "https://github.com/espinozamnj/conversorUnidades/";
 
         try {
@@ -140,7 +145,7 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_btnGHActionPerformed
 
     private void btnLongitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLongitudActionPerformed
         FrmLongitud frmLongitud = new FrmLongitud();
@@ -216,6 +221,9 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem btnArea;
+    private javax.swing.JMenuItem btnDocs;
+    private javax.swing.JMenuItem btnGH;
+    private javax.swing.JMenuItem btnGuide;
     private javax.swing.JMenuItem btnLongitud;
     private javax.swing.JMenuItem btnMasa;
     private javax.swing.JMenuItem btnPresion;
@@ -225,7 +233,5 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     // End of variables declaration//GEN-END:variables
 }

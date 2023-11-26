@@ -9,15 +9,6 @@ public class Conversor {
     public final String[] unidadesPresion = {"pascal", "atmosfera", "bar", "milímetro de mercurio", "libra por pulgada cuadrada"};
     public final String[] unidadesTemperatura = {"celsius", "fahrenheit", "kelvin"};
 
-    public float convLongitud(String unidadEntrada, String unidadSalida, float valor) {
-        if (!esUnidadValida(unidadEntrada, unidadesLongitud) || !esUnidadValida(unidadSalida, unidadesLongitud)) {
-            System.out.println("Unidad de longitud inválida.");
-            return 0;
-        }
-        float valorEnMetros = convertirAMetros(unidadEntrada, valor);
-        return convertirDesdeMetros(unidadSalida, valorEnMetros);
-    }
-
     private boolean esUnidadValida(String unidad, String[] unidades) {
         for (String u : unidades) {
             if (u.equals(unidad)) {
@@ -26,7 +17,15 @@ public class Conversor {
         }
         return false;
     }
-
+    // ------------------------------------------------
+    public float convLongitud(String unidadEntrada, String unidadSalida, float valor) {
+        if (!esUnidadValida(unidadEntrada, unidadesLongitud) || !esUnidadValida(unidadSalida, unidadesLongitud)) {
+            System.out.println("Unidad de longitud inválida.");
+            return 0;
+        }
+        float valorEnMetros = convertirAMetros(unidadEntrada, valor);
+        return convertirDesdeMetros(unidadSalida, valorEnMetros);
+    }
     private float convertirAMetros(String unidad, float valor) {
         switch (unidad) {
             case "kilómetro":
@@ -67,6 +66,7 @@ public class Conversor {
                 return valorEnMetros;
         }
     }
+    // ------------------------------------------------
     public float convArea(String unidadEntrada, String unidadSalida, float valor) {
         if (!esUnidadValida(unidadEntrada, unidadesArea) || !esUnidadValida(unidadSalida, unidadesArea)) {
             System.out.println("Unidad de área inválida.");
@@ -103,7 +103,7 @@ public class Conversor {
                 return valorEnMetrosCuadrados;
         }
     }
-
+    // ------------------------------------------------
     public float convTiempo(String unidadEntrada, String unidadSalida, float valor) {
         if (!esUnidadValida(unidadEntrada, unidadesTiempo) || !esUnidadValida(unidadSalida, unidadesTiempo)) {
             System.out.println("Unidad de tiempo inválida.");
@@ -148,7 +148,7 @@ public class Conversor {
                 return valorEnSegundos;
         }
     }
-
+    // ------------------------------------------------
     public float convMasa(String unidadEntrada, String unidadSalida, float valor) {
         if (!esUnidadValida(unidadEntrada, unidadesMasa) || !esUnidadValida(unidadSalida, unidadesMasa)) {
             System.out.println("Unidad de masa inválida.");
@@ -189,6 +189,7 @@ public class Conversor {
                 return valorEnGramos;
         }
     }
+    // ------------------------------------------------
     public float convPresion(String unidadEntrada, String unidadSalida, float valor) {
         if (!esUnidadValida(unidadEntrada, unidadesPresion) || !esUnidadValida(unidadSalida, unidadesPresion)) {
             System.out.println("Unidad de presión inválida.");
@@ -225,6 +226,7 @@ public class Conversor {
                 return valorEnPascales;
         }
     }
+    // ------------------------------------------------
     public float convTemperatura(String unidadEntrada, String unidadSalida, float valor) {
         if (!esUnidadValida(unidadEntrada, unidadesTemperatura) || !esUnidadValida(unidadSalida, unidadesTemperatura)) {
             System.out.println("Unidad de temperatura inválida.");
