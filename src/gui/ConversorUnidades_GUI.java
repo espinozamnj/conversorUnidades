@@ -16,6 +16,7 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPaneMain = new javax.swing.JDesktopPane();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         btnLongitud = new javax.swing.JMenuItem();
@@ -34,17 +35,28 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jDesktopPaneMain.setBackground(new java.awt.Color(240, 245, 250));
         jDesktopPaneMain.setPreferredSize(new java.awt.Dimension(776, 384));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo-usat-fondo.png"))); // NOI18N
+
+        jDesktopPaneMain.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jDesktopPaneMainLayout = new javax.swing.GroupLayout(jDesktopPaneMain);
         jDesktopPaneMain.setLayout(jDesktopPaneMainLayout);
         jDesktopPaneMainLayout.setHorizontalGroup(
             jDesktopPaneMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 774, Short.MAX_VALUE)
+            .addGroup(jDesktopPaneMainLayout.createSequentialGroup()
+                .addGap(287, 287, 287)
+                .addComponent(jLabel1)
+                .addContainerGap(299, Short.MAX_VALUE))
         );
         jDesktopPaneMainLayout.setVerticalGroup(
             jDesktopPaneMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 390, Short.MAX_VALUE)
+            .addGroup(jDesktopPaneMainLayout.createSequentialGroup()
+                .addGap(100, 100, 100)
+                .addComponent(jLabel1)
+                .addContainerGap(140, Short.MAX_VALUE))
         );
 
         getContentPane().add(jDesktopPaneMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 774, 390));
@@ -261,6 +273,7 @@ public class ConversorUnidades_GUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem btnTemperatura;
     private javax.swing.JMenuItem btnTiempo;
     private javax.swing.JDesktopPane jDesktopPaneMain;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
