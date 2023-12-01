@@ -1,7 +1,8 @@
 # Documentación general
 
 ## Documentación de la Clase Conversor:
-Esta clase se encuentra dentro del paquete `base`.
+> Esta clase se encuentra dentro del paquete `base`.
+
 La clase Conversor proporciona métodos para convertir entre diferentes unidades de longitud, área, tiempo, masa, presión y temperatura.
 
 ### Atributos:
@@ -15,6 +16,9 @@ La clase Conversor proporciona métodos para convertir entre diferentes unidades
 ### Métodos:
 #### De validación de datos
 **Para verificar la compatibilidad con una unidad de medida**
+
+El siguiente método buscará la unidad consultada por el parámetro dentro del arreglo de bpusqueda, devolviendo `true` de haber encontrado una coincidencia y confirmando así su compatibilidad.
+
 ```java
 private boolean esUnidadValida(String unidad, String[] unidades) {
     for (String u : unidades) {
@@ -100,9 +104,9 @@ System.out.println("Resultado: " + resultado + " grados Fahrenheit");
 ```
 
 ### Consideraciones para nuevas implementaciones
-Para optimizar el uso de métodos a fin de mejorar el rendimiento del programa, se debe trabajar con una unidad de medida que sea de intermediaria para la conversión entre las diferentes unidades de medida.
+Para optimizar el uso de métodos a fin de mejorar el rendimiento del programa, se debe trabajar con una unidad de medida que sirva de intermediaria para la conversión entre las diferentes unidades de medida.
 Esto simplifica la cantidad de métodos a implementar por cada magnitud física deseada.
-Por ejemplo, para el caso de longitud se usa al metro como unidad intermediaría, y el código seguirá esta secuencia:
+Por ejemplo, para el caso de longitud se usa al metro como unidad intermediaria, y el código seguirá esta secuencia:
 
 **Para la conversión a metros**
 
@@ -155,7 +159,8 @@ private float convertirDesdeMetros(String unidad, float valorEnMetros) {
 ```
 
 ## Documentación de interfaz gráfica
-Las clases necesarias se encuentran dentro del paquete `gui`.
+> Las clases necesarias se encuentran dentro del paquete `gui`.
+
 Se usan componentes de la clase `JInternalFrame` para cada formulario conversor.
 Los formularios deben insertarse dentro de la clase `ConversorUnidades_GUI` en el componente `jDesktopPaneMain` y por acción de uno de los botones del `JMenu` o de su atajo de teclado correspondiente.
 
